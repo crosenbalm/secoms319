@@ -2,7 +2,7 @@
     border-color: var(--bs-gray);
   }
   .form-control-dark:focus {
-    border-color: #fff;
+    border-color: #000000;
     box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
   }
   
@@ -14,3 +14,58 @@
     outline: 0;
   }
   
+  .cropped-banner {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: 0 50%;
+    overflow: hidden;
+  }
+
+  .index-banner{
+    width: 100%;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("./images/index_banner.jpg");
+  }
+
+  .image-overlay{
+    width: 100%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .top-left-image-text {
+    position: absolute;
+    padding-top: 30px;
+    padding-left: 40px;
+    top: 0px;
+    left: 0px;
+    font-size: 36px;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .bottom-right-image-text {
+    position: absolute;
+    padding-bottom: 30px;
+    padding-right: 40px;
+    font-size: 36px;
+    color: white;
+    bottom: 0px;
+    right: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .featured-images{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 60%;
+    overflow: hidden;
+  }
