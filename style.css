@@ -58,6 +58,14 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
+  .center-image-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white
+  }
+
   .container {
     position: relative;
   }
