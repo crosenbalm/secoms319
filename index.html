@@ -140,38 +140,8 @@
 
       <!-- Featured items & button to menu page -->
       <div class="container" style="margin-top: 40px;">
-        <!--
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-            <div class="card shadow-sm">
-              <img class="featured-images" src="./images/banana_pancakes.jpg">
-              <div class="card-body">
-                <p class="card-text">This will be read from the json file</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm" id="featured-card">
-              <img class="featured-images" src="./images/chicken_sandwich.jpg">
-              <div class="card-body">
-                <p class="card-header">Item name</p>
-                <p class="card-text">This will be read from the json file</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <img class="featured-images" src="./images/fruit_french_toast.jpg" style="object-position: 0 20%;">
-              <div class="card-body">
-                <p class="card-text">This will be read from the json file</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="featured-card">
+        <div class = "border rounded">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="margin: 20px;" id="featured-card"></div>
         </div>
 
         <a href="./menu.html">
@@ -190,17 +160,31 @@
             <div class="center-image-text">
               <h1>Try our catering!</h1>
               <div class="col-lg-6 col-xxl-4 mx-auto">
-                <a href="./about.html">
-                  <button class="btn btn-warning" type="button">See more!</button>
-                </a>
-                
+                <a href="./about.html"><button class="btn btn-warning" type="button">See more!</button></a>
               </div>
             </div>
           </div>
-         </div>
-         </header>
+        </div>
+        </header>
       </div>
 
+      <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+          <img src="./images/location.png" width="40%" height="100%">
+          <table class="time-table" style="margin-left: 60px;">
+            <thead><th colspan="2"><h1>Location & Hours</h1></th></thead>
+            <tbody>
+            <tr><td>Monday</td>     <td>8AM - 9PM</td></tr>
+            <tr><td>Tuesday</td>    <td>8AM - 9PM</td></tr>
+            <tr><td>Wednesday</td>  <td>8AM - 9PM</td></tr>
+            <tr><td>Thursday</td>   <td>8AM - 9PM</td></tr>
+            <tr><td>Friday</td>     <td>8AM - 9PM</td></tr>
+            <tr><td>Saturday</td>   <td>8AM - 9PM</td></tr>
+            <tr><td>Sunday</td>     <td>8AM - 9PM</td></tr>
+            </tbody>
+          </table>
+        </header>
+      </div>
 
       <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -209,5 +193,7 @@
           </div>
         </footer>
       </div>
+
+      
 </body>
 </html>

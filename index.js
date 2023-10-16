@@ -48,11 +48,11 @@ function loadItems(featuredItems) {
         let itemImage = item.image;
 
         let card = document.createElement("div");
-        card.className = "card";
+        card.className = "card mb-4 border-0";
 
         let img = document.createElement("img");
         img.src = itemImage;
-        img.className = "featured-images";
+        img.className = "featured-images rounded";
         img.alt = itemName;
 
         let cardBody = document.createElement("div");

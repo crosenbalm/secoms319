@@ -77,3 +77,9 @@
     object-position: 0 60%;
     overflow: hidden;
   }
+
+  .time-table th,
+  .time-table td {
+    text-align: center;
+    padding: 10px 15px;
+  }
