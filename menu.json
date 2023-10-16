@@ -1,0 +1,67 @@
+{
+    "dishes": [
+        {
+            "dishId": "1234",
+            "dishName": "Chicken Caesar Salad",
+            "dishPrice": 10,
+            "url": "https://freepngimg.com/thumb/avengers/5-2-avengers-png-picture.png",
+            "description": "A classic salad with crisp romaine lettuce, parmesan cheese, and croutons, topped with tender grilled chicken. Dressed with a creamy Caesar dressing."
+        },
+        {
+            "dishId": "1235",
+            "dishName": "Vegetable Stir Fry",
+            "dishPrice": 12,
+            "url": "vegetablestirfry.png",
+            "description": "A medley of fresh vegetables sautéed in a savory sauce. Served with steamed rice for a fulfilling meal."
+        },
+        {
+            "dishId": "1236",
+            "dishName": "Spaghetti Carbonara",
+            "dishPrice": 15,
+            "url": "spaghetticarbonara.png",
+            "description": "Creamy spaghetti combined with crispy pancetta and a hint of garlic. Topped with fresh parsley and grated parmesan cheese."
+        },
+        {
+            "dishId": "1237",
+            "dishName": "Grilled Salmon",
+            "dishPrice": 20,
+            "url": "grilledsalmon.png",
+            "description": "Fresh salmon fillet, seasoned and grilled to perfection. Served with lemon wedges and a side of asparagus."
+        },
+        {
+            "dishId": "1238",
+            "dishName": "Beef Steak",
+            "dishPrice": 25,
+            "url": "https://freepngimg.com/thumb/avengers/5-2-avengers-png-picture.png",
+            "description": "Juicy and tender beef steak seasoned with herbs and grilled. Paired with roasted potatoes and a rich mushroom sauce."
+        },
+        {
+            "dishId": "1239",
+            "dishName": "Veggie Burger",
+            "dishPrice": 14,
+            "url": "veggieburger.png",
+            "description": "A hearty vegetable patty served in a soft bun. Topped with fresh lettuce, tomato, and a tangy sauce."
+        },
+        {
+            "dishId": "1240",
+            "dishName": "Shrimp Tacos",
+            "dishPrice": 16,
+            "url": "shrimptacos.png",
+            "description": "Soft tortillas filled with grilled shrimp, fresh cabbage slaw, and a zesty lime sauce. A refreshing and tangy delight."
+        },
+        {
+            "dishId": "1241",
+            "dishName": "Lamb Chops with Mint Sauce",
+            "dishPrice": 22,
+            "url": "lambchopsmintsauce.png",
+            "description": "Tender lamb chops seasoned and grilled to perfection. Complemented with a mint sauce for a harmonious blend of flavors."
+        },
+        {
+            "dishId": "1242",
+            "dishName": "Eggplant Parmesan",
+            "dishPrice": 18,
+            "url": "https://freepngimg.com/thumb/avengers/5-2-avengers-png-picture.png",
+            "description": "Sliced eggplant layered with marinara sauce and mozzarella cheese, then baked. A delightful Italian dish full of flavors."
+        }
+    ]
+}
