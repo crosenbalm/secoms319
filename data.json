@@ -1,0 +1,22 @@
+{
+    "featuredItems": [
+        {
+            "name": "Banana Pancakes",
+            "price": "$9",
+            "description": "A delightful twist on classic pancakes, our fluffy banana-infused stacks are the perfect blend of comfort and flavor, served with a touch of syrup for a heavenly breakfast experience.",
+            "image": "./images/banana_pancakes.jpg"
+        },
+        {
+            "name": "Chicken Sandwich",
+            "price": "$11",
+            "description": "Our mouthwatering chicken sandwich is a culinary masterpiece, featuring tender, perfectly seasoned chicken breast, fresh vegetables, and a delectable sauce, all sandwiched between soft, toasted buns.",
+            "image": "./images/chicken_sandwich.jpg"
+        },
+        {
+            "name": "Banana and Blueberry French Toast",
+            "price": "$10",
+            "description": "Our French toast is soaked in a rich custard, griddled to golden perfection, and generously topped with fresh bananas and juicy blueberries.",
+            "image": "./images/fruit_french_toast.jpg"
+        }
+    ]
+}
