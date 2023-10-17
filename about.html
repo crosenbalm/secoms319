@@ -107,21 +107,23 @@
 </head>
 <body>
 
-  <!-- Nav bar -->
+  <!-- Navigation bar -->
   <div class="container">
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <header class="d-flex flex-wrap justify-content-center py-3">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
         <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
-        <img src="./images/logo.png">
+        <img src="./images/logo.png" class="float-on-hover">
       </a>
 
       <ul class="nav nav-pills" style="align-items:center;">
-        <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="./menu.html" class="nav-link">Menu</a></li>
-        <li class="nav-item"><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+        <li class="nav-item"><a href="./index.html" class="primary-button" aria-current="page">Home</a></li>
+        <li class="nav-item"><a href="./menu.html" class="primary-button">Menu</a></li>
+        <li class="nav-item"><a href="about.html" class="primary-button-active">About</a></li>
       </ul>
     </header>
-  </div>
+</div>
+<hr class="solid" style="filter: blur(1px);">
+
 
   <!-- Banner image & text -->
   <div class="container" style="margin-bottom: 80px;">
@@ -139,9 +141,9 @@
   </div>
 
   <!-- Student info section -->
-  <div class="container">
+  <div class="container" style="margin-bottom: 75px;">
     <div class="row align-items-md-stretch">
-      <div class="col-md-6">
+      <div class="col-md-6" style="margin-bottom: 20px;">
         <div class="h-100 p-5 border rounded-3">
           <h2>Cale Rosenbalm</h2>
           <p>Happy (early) Halloween!</p>
@@ -166,16 +168,18 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <div class="container">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-          <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Totally Real Restaurant, Inc</span>
-        </div>
-      </footer>
-    </div>
   </div>
+
+  <!-- Footer -->
+  <hr class="solid" style="filter: blur(1px);">
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+      <div class="col-md-4 d-flex align-items-center">
+        <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Totally Real Restaurant, Inc</span>
+      </div>
+    </footer>
+  </div>
+
 </main>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
