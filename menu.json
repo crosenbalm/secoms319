@@ -2,66 +2,79 @@
     "dishes": [
         {
             "dishId": "1234",
-            "dishName": "Chicken Caesar Salad",
-            "dishPrice": 10,
-            "url": "https://freepngimg.com/thumb/avengers/5-2-avengers-png-picture.png",
-            "description": "A classic salad with crisp romaine lettuce, parmesan cheese, and croutons, topped with tender grilled chicken. Dressed with a creamy Caesar dressing."
+            "dishName": "Banana Pancakes",
+            "dishPrice": 9,
+            "url": "./images/banana_pancakes.jpg",
+            "description": "A delightful twist on classic pancakes, our fluffy banana-infused stacks are the perfect blend of comfort and flavor, served with a touch of syrup for a heavenly breakfast experience."
         },
         {
             "dishId": "1235",
-            "dishName": "Vegetable Stir Fry",
-            "dishPrice": 12,
-            "url": "vegetablestirfry.png",
-            "description": "A medley of fresh vegetables sautéed in a savory sauce. Served with steamed rice for a fulfilling meal."
+            "dishName": "Chicken Sandwich",
+            "dishPrice": 11,
+            "url": "./images/chicken_sandwich.jpg",
+            "description": "Our mouthwatering chicken sandwich is a culinary masterpiece, featuring tender, perfectly seasoned chicken breast, fresh vegetables, and a delectable sauce, all sandwiched between soft, toasted buns."
         },
         {
             "dishId": "1236",
-            "dishName": "Spaghetti Carbonara",
-            "dishPrice": 15,
-            "url": "spaghetticarbonara.png",
-            "description": "Creamy spaghetti combined with crispy pancetta and a hint of garlic. Topped with fresh parsley and grated parmesan cheese."
-        },
+            "dishName": "Banana and Blueberry French Toast",
+            "dishPrice": 10,
+            "url": "./images/fruit_french_toast.jpg",
+            "description": "Our French toast is soaked in a rich custard, griddled to golden perfection, and generously topped with fresh bananas and juicy blueberries."
+        }
+        ,
         {
             "dishId": "1237",
             "dishName": "Grilled Salmon",
             "dishPrice": 20,
-            "url": "grilledsalmon.png",
-            "description": "Fresh salmon fillet, seasoned and grilled to perfection. Served with lemon wedges and a side of asparagus."
+            "url": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+            "description": "Fresh salmon fillet, seasoned and grilled to perfection."
         },
         {
             "dishId": "1238",
             "dishName": "Beef Steak",
             "dishPrice": 25,
-            "url": "https://freepngimg.com/thumb/avengers/5-2-avengers-png-picture.png",
-            "description": "Juicy and tender beef steak seasoned with herbs and grilled. Paired with roasted potatoes and a rich mushroom sauce."
+            "url": "https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+            "description": "Juicy and tender beef steak seasoned with herbs and grilled. Paired with French Fries."
         },
         {
             "dishId": "1239",
-            "dishName": "Veggie Burger",
-            "dishPrice": 14,
-            "url": "veggieburger.png",
-            "description": "A hearty vegetable patty served in a soft bun. Topped with fresh lettuce, tomato, and a tangy sauce."
+            "dishName": "EXHamburger",
+            "dishPrice": 18,
+            "url": "https://images.unsplash.com/photo-1617364066121-8a26d640130f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2127&q=80",
+            "description": "A towering delight consisting of multiple juicy beef patties layered with melted cheese. Accompanied by fresh lettuce, sliced tomatoes, and onions."        
         },
         {
             "dishId": "1240",
-            "dishName": "Shrimp Tacos",
-            "dishPrice": 16,
-            "url": "shrimptacos.png",
-            "description": "Soft tortillas filled with grilled shrimp, fresh cabbage slaw, and a zesty lime sauce. A refreshing and tangy delight."
+            "dishName": "Chicken Alfredo Pasta",
+            "dishPrice": 18,
+            "url": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+            "description": "Creamy alfredo sauce mixed with tender pieces of chicken and served over freshly cooked pasta. A classic Italian treat."
         },
+        
         {
             "dishId": "1241",
-            "dishName": "Lamb Chops with Mint Sauce",
-            "dishPrice": 22,
-            "url": "lambchopsmintsauce.png",
-            "description": "Tender lamb chops seasoned and grilled to perfection. Complemented with a mint sauce for a harmonious blend of flavors."
-        },
+            "dishName": "Mixed Grill Platter",
+            "dishPrice": 30,
+            "url": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+            "description": "A delectable assortment of grilled delights. Featuring juicy chicken skewers, tender lamb chops, flavorful roasted vegetables, and perfectly grilled potatoes."
+        }
+        ,
         {
             "dishId": "1242",
-            "dishName": "Eggplant Parmesan",
-            "dishPrice": 18,
-            "url": "https://freepngimg.com/thumb/avengers/5-2-avengers-png-picture.png",
-            "description": "Sliced eggplant layered with marinara sauce and mozzarella cheese, then baked. A delightful Italian dish full of flavors."
+            "dishName": "Grilled Octopus Tentacle",
+            "dishPrice": 18,    
+            "url": "https://images.unsplash.com/photo-1626232441076-a2a5ada2256a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+            "description": "A meticulously plated dish featuring a succulent grilled octopus tentacle."
+        
         }
+        ,
+        {
+            "dishId": "1243",
+            "dishName": "Pulled Chicken Gourmet Pizza",
+            "dishPrice": 20,
+            "url": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1981&q=80",
+            "description": "A sumptuous pizza topped with succulent pulled chicken, fresh pineapple chunks, sliced red onions, and a drizzle of tangy barbecue sauce."
+        }
+        
     ]
 }
