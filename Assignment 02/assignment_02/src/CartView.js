@@ -4,8 +4,21 @@ import { useNavigate } from 'react-router-dom';
 function CartView({ cart, clearCart }) {
   const navigate = useNavigate();
 
+  // Aggregate cart items by id and count them
+  const cartWithCounts = cart.reduce((acc, item) => {
+    if (!acc[item.id]) {
+      acc[item.id] = { ...item, count: 1 };
+    } else {
+      acc[item.id].count += 1;
+    }
+    return acc;
+  }, {});
+
+  // Convert the map object back to an array for rendering
+  const cartItems = Object.values(cartWithCounts);
+
   const handleCheckout = () => {
-    navigate('/checkout'); // Navigate to the "Checkout" page
+    navigate('/checkout');
   };
 
   const total = cart.reduce((acc, item) => acc + item.price, 0);
@@ -13,18 +26,27 @@ function CartView({ cart, clearCart }) {
   return (
     <div>
       <h1>Your Cart</h1>
-      <ul>
-        {cart.map((item) => (
-          <li key={item.id}>
-            {item.name} - ${item.price}
+      <ul style={{ listStyle: 'none' }}>
+        {cartItems.map((item) => (
+          <li key={item.id} style={{ marginBottom: '20px' }}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+              <img src={item.image} alt={item.name} style={{ width: '100px', height: '100px', marginRight: '20px' }} />
+              <div>
+                <h3>{item.title} (x{item.count})</h3>
+                <p>{item.description}</p>
+                <p>Item ID: {item.id}</p>
+                <p>Price: ${item.price}</p>
+                <p>Total: ${(item.price * item.count).toFixed(2)}</p>
+              </div>
+            </div>
           </li>
         ))}
       </ul>
-      <p>Total: ${total}</p> {/* Display the correct total */}
+      <p>Total: ${total.toFixed(2)}</p>
       {cart.length > 0 && (
         <div>
           <button onClick={clearCart}>Clear Cart</button>
-          <button onClick={handleCheckout}>Checkout</button> {/* Button to initiate checkout */}
+          <button onClick={handleCheckout}>Checkout</button>
         </div>
       )}
     </div>
