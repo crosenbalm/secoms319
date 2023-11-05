@@ -1,10 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function CartView({ cart, clearCart }) {
+function CartView({ cart, clearCart, subtractFromCart }) {
   const navigate = useNavigate();
 
-  // Aggregate cart items by id and count them
   const cartWithCounts = cart.reduce((acc, item) => {
     if (!acc[item.id]) {
       acc[item.id] = { ...item, count: 1 };
@@ -14,7 +13,6 @@ function CartView({ cart, clearCart }) {
     return acc;
   }, {});
 
-  // Convert the map object back to an array for rendering
   const cartItems = Object.values(cartWithCounts);
 
   const handleCheckout = () => {
@@ -37,6 +35,7 @@ function CartView({ cart, clearCart }) {
                 <p>Item ID: {item.id}</p>
                 <p>Price: ${item.price}</p>
                 <p>Total: ${(item.price * item.count).toFixed(2)}</p>
+                <button onClick={() => subtractFromCart(item)}>Remove</button>
               </div>
             </div>
           </li>
