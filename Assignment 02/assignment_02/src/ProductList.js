@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import products from './products.json';
 
 function ProductList({ addToCart }) {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const filteredProducts = searchTerm
+    ? products.filter(product =>
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    : products;
+
   return (
     <div>
       <h1>Product List</h1>
-      {products.map((product) => (
+      <input
+        type="text"
+        placeholder="Search products..."
+        value={searchTerm}
+        onChange={handleSearchChange}
+      />
+      {filteredProducts.map((product) => (
         <div key={product.id}>
-          <img src={product.image} width={150}></img>
+          <img src={product.image} alt={product.title} width={150} />
           <h2>{product.title}</h2>
           <p>{product.description}</p>
           <p>Price: ${product.price}</p>

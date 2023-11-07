@@ -12,15 +12,6 @@ function App() {
     setCart([...cart, product]);
   };
 
-  const subtractFromCart = (product) => {
-    const updatedCart = cart.filter((item) => item.id !== product.id);
-    setCart(updatedCart);
-  };
-
-  const clearCart = () => {
-    setCart([]);
-  };
-
   return (
     <Router>
       <div>
@@ -36,9 +27,9 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" element={<ProductList addToCart={addToCart} />} />
-          <Route path="/cart" element={<CartView cart={cart} clearCart={clearCart} subtractFromCart={subtractFromCart}/>} />
-          <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart} />} />
-          <Route path="/confirmation" element={<Confirmation cart={cart} clearCart={clearCart} />} />
+          <Route path="/cart" element={<CartView cart={cart} setCart={setCart} />} />
+          <Route path="/checkout" element={<Checkout cart={cart} clearCart={() => setCart([])} />} />
+          <Route path="/confirmation" element={<Confirmation cart={cart} setCart={setCart} />} />
         </Routes>
       </div>
     </Router>
