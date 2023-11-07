@@ -4,6 +4,8 @@ import ProductList from './ProductList';
 import CartView from './CartView';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
+import Payment from './Payment';
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -29,6 +31,7 @@ function App() {
           <Route path="/" element={<ProductList addToCart={addToCart} />} />
           <Route path="/cart" element={<CartView cart={cart} setCart={setCart} />} />
           <Route path="/checkout" element={<Checkout cart={cart} clearCart={() => setCart([])} />} />
+          <Route path="/payment" element={<Payment cart={cart} clearCart={() => setCart([])} />} />
           <Route path="/confirmation" element={<Confirmation cart={cart} setCart={setCart} />} />
         </Routes>
       </div>

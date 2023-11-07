@@ -17,10 +17,17 @@ function Checkout({ cart, clearCart }) {
   // Convert the map object back to an array for rendering
   const cartItems = Object.values(cartWithCounts);
 
+  // const handleCheckout = () => {
+  //   // Implement your checkout logic here.
+  //   clearCart();
+  //   navigate('/confirmation');
+  // };
+
+
   const handleCheckout = () => {
-    // Implement your checkout logic here.
+    // You can add any pre-payment logic here if necessary
     clearCart();
-    navigate('/confirmation');
+    navigate('/payment');
   };
 
   const total = cart.reduce((acc, item) => acc + item.price, 0);
@@ -44,6 +51,8 @@ function Checkout({ cart, clearCart }) {
         ))}
       </ul>
       <p>Total: ${total.toFixed(2)}</p>
+      <button onClick={() => navigate('/payment')}>Proceed to Payment</button>
+
       <button onClick={handleCheckout}>Complete Order</button>
     </div>
   );
