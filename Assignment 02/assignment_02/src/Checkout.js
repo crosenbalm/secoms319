@@ -17,18 +17,18 @@ function Checkout({ cart, clearCart }) {
   // Convert the map object back to an array for rendering
   const cartItems = Object.values(cartWithCounts);
 
-  // const handleCheckout = () => {
-  //   // Implement your checkout logic here.
-  //   clearCart();
-  //   navigate('/confirmation');
-  // };
-
-
   const handleCheckout = () => {
-    // You can add any pre-payment logic here if necessary
+    // Implement your checkout logic here.
     clearCart();
-    navigate('/payment');
+    navigate('/confirmation');
   };
+
+
+  // const handleCheckout = () => {
+  //   // You can add any pre-payment logic here if necessary
+  //   clearCart();
+  //   navigate('/payment');
+  // };
 
   const total = cart.reduce((acc, item) => acc + item.price, 0);
 
