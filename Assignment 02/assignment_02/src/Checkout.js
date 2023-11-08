@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 function Checkout({ cart, clearCart }) {
   const navigate = useNavigate();
 
+  
+
   // Aggregate cart items by id and count them
   const cartWithCounts = cart.reduce((acc, item) => {
     if (!acc[item.id]) {
@@ -19,7 +21,7 @@ function Checkout({ cart, clearCart }) {
 
   const handleCheckout = () => {
     // Implement your checkout logic here.
-    clearCart();
+    // clearCart();
     navigate('/confirmation');
   };
 
