@@ -13,8 +13,12 @@ function App() {
   };
 
   const subtractFromCart = (product) => {
-    const updatedCart = cart.filter((item) => item.id !== product.id);
+    const itemIndex = cart.findIndex((item) => item.id === product.id);
+  if (itemIndex !== -1) {
+    const updatedCart = [...cart];
+    updatedCart.splice(itemIndex, 1); // Remove the item at itemIndex
     setCart(updatedCart);
+  }
   };
 
   const clearCart = () => {
@@ -36,7 +40,7 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" element={<ProductList addToCart={addToCart} />} />
-          <Route path="/cart" element={<CartView cart={cart} clearCart={clearCart} subtractFromCart={subtractFromCart}/>} />
+          <Route path="/cart" element={<CartView cart={cart} setCart={setCart} subtractFromCart={subtractFromCart} />} />
           <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart} />} />
           <Route path="/confirmation" element={<Confirmation cart={cart} clearCart={clearCart} />} />
         </Routes>

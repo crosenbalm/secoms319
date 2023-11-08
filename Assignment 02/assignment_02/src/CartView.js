@@ -1,44 +1,18 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function CartView({ cart, setCart }) {
+function CartView({ cart, setCart, subtractFromCart }) {
   const navigate = useNavigate();
 
-// When adding to cart, make sure the item has a count property
-const addToCart = (product) => {
-  setCart((currentCart) => {
-    const existingItem = currentCart.find((item) => item.id === product.id);
-    if (existingItem) {
-      // If the item already exists, increment the count
-      return currentCart.map((item) =>
-        item.id === product.id ? { ...item, count: item.count + 1 } : item
-      );
-    } else {
-      // If the item is new, add it with a count of 1
-      return [...currentCart, { ...product, count: 1 }];
-    }
-  });
+const incrementCount = (item) => {
+  setCart([...cart, item]);
 };
 
-const incrementCount = (itemId) => {
-  setCart((currentCart) =>
-    currentCart.map((item) =>
-      item.id === itemId ? { ...item, count: item.count + 1 } : item
-    )
-  );
+const decrementCount = (item) => {
+  subtractFromCart(item);
 };
 
-const decrementCount = (itemId) => {
-  setCart((currentCart) =>
-    currentCart.reduce((acc, item) => {
-      if (item.id === itemId) {
-        if (item.count === 1) return acc; // If only one item left, remove it by not adding to accumulator
-        return [...acc, { ...item, count: item.count - 1 }]; // If more than one, decrement count
-      }
-      return [...acc, item]; // If not the item to decrement, just add to accumulator
-    }, [])
-  );
-};
+
 
   const clearCart = () => {
     setCart([]);
@@ -77,10 +51,9 @@ const decrementCount = (itemId) => {
                 <p>Price: ${item.price}</p>
                 <p>Total: ${(item.price * item.count).toFixed(2)}</p>
                 <div>
-                  <button onClick={() => decrementCount(item.id)}>-</button>
+                  <button onClick={() => decrementCount(item)}>-</button>
                   <span> {item.count} </span>
-                  <button onClick={() => incrementCount(item.id)}>+</button>
-
+                  <button onClick={() => incrementCount(item)}>+</button>
                 </div>
               </div>
             </div>
