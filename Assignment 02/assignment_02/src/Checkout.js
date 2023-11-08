@@ -51,8 +51,27 @@ function Checkout({ cart, clearCart }) {
         ))}
       </ul>
       <p>Total: ${total.toFixed(2)}</p>
-      <button onClick={() => navigate('/payment')}>Proceed to Payment</button>
 
+      <div>
+        <div>
+          <label for="inputName" class ="form-label">Full Name </label>
+          <input type='text' class="form-control" id="inputName"></input> <br/>
+          <label for="inputEmail" class ="form-label">Email </label>
+          <input type='text' class="form-control" id="inputEmail"></input> <br/>
+          <label for="inputCard" class ="form-label">Debit/Credit Card </label>
+          <input type='text' class="form-control" id="inputCard"></input> <br/>
+          <label for="inputAddress1" class ="form-label">Address 1 </label>
+          <input type='text' class="form-control" id="inputAddress1"></input> <br/>
+          <label for="inputAddress2" class ="form-label">Address 2 </label>
+          <input type='text' class="form-control" id="inputAddress2"></input> <br/>
+          <label for="inputCity" class ="form-label">City </label>
+          <input type='text' class="form-control" id="inputCity"></input> <br/>
+          <label for="inputState" class ="form-label">State </label>
+          <input type='text' class="form-control" id="inputState"></input> <br/>
+          <label for="inputZip" class ="form-label">Zip </label>
+          <input type='text' class="form-control" id="inputZip"></input> <br/>
+        </div>
+      </div>
       <button onClick={handleCheckout}>Complete Order</button>
     </div>
   );
