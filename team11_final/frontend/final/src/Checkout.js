@@ -32,7 +32,7 @@ function Checkout({ cart, clearCart }) {
   //   navigate('/payment');
   // };
 
-  const total = cart.reduce((acc, item) => acc + item.price, 0);
+  const total = cart.reduce((acc, item) => acc + item.dishPrice, 0);
 
   return (
     <div>
@@ -41,13 +41,13 @@ function Checkout({ cart, clearCart }) {
       <ul style={{ listStyle: 'none' }}>
         {cartItems.map((item) => (
           <li key={item.id} style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-            <img src={item.image} alt={item.name} style={{ width: '100px', height: '100px', marginRight: '20px' }} />
+            <img src={item.url} alt={item.dishName} style={{ width: '100px', height: '100px', marginRight: '20px' }} />
             <div>
-            <h3>{item.title} (x{item.count})</h3>
+            <h3>{item.dishName} (x{item.count})</h3>
                 <p>{item.description}</p>
                 <p>Item ID: {item.id}</p>
-                <p>Price: ${item.price}</p>
-                <p>Total: ${(item.price * item.count).toFixed(2)}</p>
+                <p>Price: ${item.dishPrice}</p>
+                <p>Total: ${(item.dishPrice * item.count).toFixed(2)}</p>
             </div>
           </li>
         ))}

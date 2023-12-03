@@ -32,7 +32,7 @@ function Confirmation({ cart, clearCart }) {
     navigate('/'); 
   };
 
-  const total = aggregatedCart.reduce((acc, item) => acc + (item.price * item.count), 0);
+  const total = aggregatedCart.reduce((acc, item) => acc + (item.dishPrice * item.count), 0);
 
   return (
     <div>
@@ -46,13 +46,13 @@ function Confirmation({ cart, clearCart }) {
           <ul style={{ listStyle: 'none' }}>
             {aggregatedCart.map((item) => (
               <li key={item.id} style={{ marginBottom: '20px', display: 'flex', alignItems: 'center' }}>
-                <img src={item.image} alt={item.title} style={{ width: '100px', height: '100px', marginRight: '20px' }} />
+                <img src={item.url} alt={item.dishName} style={{ width: '100px', height: '100px', marginRight: '20px' }} />
                 <div>
-                  <h3>{item.title} (x{item.count})</h3>
+                  <h3>{item.dishName} (x{item.count})</h3>
                   <p>{item.description}</p>
                   <p>Item ID: {item.id}</p>
-                  <p>Price: ${item.price}</p>
-                  <p>Total: ${(item.price * item.count).toFixed(2)}</p>
+                  <p>Price: ${item.dishPrice}</p>
+                  <p>Total: ${(item.dishPrice * item.count).toFixed(2)}</p>
                 </div>
               </li>
             ))}

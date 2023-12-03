@@ -21,18 +21,6 @@ const Shop = () => {
         hardCopy = hardCopy.filter((cartItem) => cartItem.id !== el.id);
         setCart(hardCopy);
     }
-/*
-    const listItems = items.map((el) => (
-        <div key={el.id}>
-            <img class="img-fluid" src={el.image} width={150}/> <br/>
-
-{el.title} <br/>
-{el.category} <br/>
-{el.price} <br/>
-            <button type="button" onClick={() => removeFromCart(el)}>-</button>{" "}
-            <button type="button" variant="light" onClick={() => addToCart(el)}>+</button>
-        </div>
-    ));*/
 
     const listItems = menuItems.map((el) => (
         <div key={el.id}>

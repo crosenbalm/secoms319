@@ -10,7 +10,7 @@ function ProductList({ addToCart }) {
 
   const filteredProducts = searchTerm
     ? products.filter(product =>
-        product.title.toLowerCase().includes(searchTerm.toLowerCase())
+        product.dishName.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : products;
 
@@ -25,10 +25,10 @@ function ProductList({ addToCart }) {
       />
       {filteredProducts.map((product) => (
         <div key={product.id}>
-          <img src={product.image} alt={product.title} width={150} />
-          <h2>{product.title}</h2>
+          <img src={product.url} alt={product.disName} width={150} />
+          <h2>{product.dishName}</h2>
           <p>{product.description}</p>
-          <p>Price: ${product.price}</p>
+          <p>Price: ${product.dishPrice}</p>
           <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       ))}
