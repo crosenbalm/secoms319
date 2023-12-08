@@ -16,30 +16,25 @@ const About = () => {
     );
 };
 
-// Create component
 const Create = () => {
-  // Your logic for creating a new product
   return (
     <div>
       <h1>Create New Product</h1>
-      {/* Add your form or UI for creating a new product */}
+      
     </div>
   );
 };
 
-// Read component (show all)
 const Read = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    // Your logic for fetching all products
-    // Example: fetchAllProducts();
+
   }, []);
 
-  // Your UI logic to display products
   const showAllItems = products.map((el) => (
     <div key={el.id}>
-      {/* Display product information */}
+
     </div>
   ));
 
@@ -51,29 +46,22 @@ const Read = () => {
   );
 };
 
-// Update component
 const Update = () => {
-  // Your logic for updating the price of a product
   return (
     <div>
       <h1>Update Product</h1>
-      {/* Add your form or UI for updating a product */}
     </div>
   );
 };
 
-// Delete component
 const Delete = () => {
-  // Your logic for deleting a product
   return (
     <div>
       <h1>Delete Product</h1>
-      {/* Add your form or UI for deleting a product */}
     </div>
   );
 };
 
-// Main App component
 const App = () => {
   return (
     <Router>
