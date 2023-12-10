@@ -15,19 +15,20 @@ const App = () => {
         <nav className="navbar">
           <ul className="nav-list">
             <li className="nav-item">
-              <Link to="/about" className="nav-link">About</Link>
+              <Link to="/read" className="nav-link">Read</Link>
             </li>
             <li className="nav-item">
               <Link to="/create" className="nav-link">Create</Link>
             </li>
-            <li className="nav-item">
-              <Link to="/read" className="nav-link">Read</Link>
-            </li>
+
             <li className="nav-item">
               <Link to="/update" className="nav-link">Update</Link>
             </li>
             <li className="nav-item">
               <Link to="/delete" className="nav-link">Delete</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link">About</Link>
             </li>
           </ul>
         </nav>
