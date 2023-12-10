@@ -1,7 +1,8 @@
 Steps to run the site (assuming you have all the software from class downloaded):
 
 1. MongoDB
-    a. In mongodb, make sure you have a database named 'coms319' and a collection named 'Items' (preferably not an empty collection)
+    a. In mongodb, make sure you have a database named 'coms319' and a collection named 'Items'
+    b. Make sure the FakestoreAPI json from class is in your collection
     b. Connection string should be localhost:27017 (located in the top left corner)
 
 2. Running the local server
