@@ -43,32 +43,40 @@ const Create = () => {
         // Validation checks
         for (const key in formData) {
             if (formData[key] === '' || (typeof formData[key] === 'object' && (formData[key].rate === 0 || formData[key].count === 0))) {
-                // Field is empty or has invalid value
+                // Field is empty or has an invalid value
                 alert(`Please fill out the ${key} field.`);
                 return;
             }
         }
     
+        const formattedData = {
+            ...formData,
+            rating: { ...formData.rating }
+        };
+    
         fetch('http://localhost:8081/addItem', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formData)
+            body: JSON.stringify(formattedData)
         })
         .then(response => response.json())
         .then(data => {
             console.log(data);
+    
+            // Check if the element with ID "showData" exists before manipulating it
             var container = document.getElementById("showData");
-            container.innerHTML = JSON.stringify(data);
+            if (container) {
+                container.innerHTML = JSON.stringify(data);
+            }
     
             setFormData(initialFormData);
     
             setSuccessMessage('Product added successfully!');
-            
-            setTimeout(() => setSuccessMessage(''), 3000);
+    
+            setTimeout(() => setSuccessMessage(''), 6000);
         });
     };
     
-
 
     const clearForm = () => {
         setFormData(initialFormData);
