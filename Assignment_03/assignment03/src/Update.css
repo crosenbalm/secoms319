@@ -20,18 +20,18 @@
     font-size: 16px;
   }
   
-  .update-button { /* Updated class name */
+  .update-button {
     padding: 10px 15px;
     border-radius: 5px;
     border: none;
-    background-color: #007bff; /* Primary blue */
+    background-color: #0542c5; 
     color: white;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  .update-button:hover { /* Updated class name */
-    background-color: #0056b3; /* Darker blue on hover */
+  .update-button:hover { 
+    background-color: #0056b3; 
   }
   

@@ -13,7 +13,7 @@
 
 
 import React, { useState } from 'react';
-import './Update.css'; // Make sure to create this CSS file
+import './Update.css'; 
 
 const Update = () => {
   const [productId, setProductId] = useState('');
