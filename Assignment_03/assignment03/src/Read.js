@@ -22,7 +22,7 @@ const Read = () => {
       <img src={el.image} width={300} alt={`Image for ${el.title}`} />
       <p>Name: {el.title}</p>
       <p>Price: {el.price}</p>
-      <p>"Category: {el.category}</p>
+      <p>Category: {el.category}</p>
       <p>Description: {el.description}</p>
     </div>
   ));
