@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 const Read = () => {
   const [products, setProducts] = useState([]);
@@ -7,8 +6,9 @@ const Read = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8081/items');
-        setProducts(response.data);
+        const response = await fetch('http://localhost:8081/listItems'); // Updated to use fetch
+        const data = await response.json();
+        setProducts(data);
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -19,7 +19,10 @@ const Read = () => {
 
   const showAllItems = products.map((el) => (
     <div key={el.id}>
-      <p>Name: {el.name}</p>
+      <img src={el.image} width={300} alt={`Image for ${el.title}`} />
+      <p>Name: {el.title}</p>
+      <p>Price: {el.price}</p>
+      <p>"Category: {el.category}</p>
       <p>Description: {el.description}</p>
     </div>
   ));
@@ -27,7 +30,7 @@ const Read = () => {
   return (
     <div>
       <h1>Read All Products</h1>
-      <div>Products {showAllItems}</div>
+      <div>Products: {showAllItems}</div>
     </div>
   );
 };

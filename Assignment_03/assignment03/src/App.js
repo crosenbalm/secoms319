@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import About from './About'; // Assuming you have About component in a separate file
-import Create from './Create'; // Assuming you have Create component in a separate file
-import Read from './Read'; // Assuming you have Read component in a separate file
-import Update from './Update'; // Assuming you have Update component in a separate file
-import Delete from './Delete'; // Assuming you have Delete component in a separate file
+import About from './About';
+import Create from './Create';
+import Read from './Read'; 
+import Update from './Update'; 
+import Delete from './Delete'; 
 
 const App = () => {
   return (
