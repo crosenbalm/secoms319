@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Create.css';
 
 const Create = () => {
     const initialFormData = {
@@ -68,41 +69,96 @@ const Create = () => {
     };
     
 
+
     const clearForm = () => {
         setFormData(initialFormData);
     };
 
+    // return (
+    //     <div>
+    //         <h1>Create New Product</h1>
+    //         <form onSubmit={createNew}>
+    //             <label>ID:</label>
+    //             <input type="number" name="id" value={formData.id} onChange={handleInputChange} /> <br/>
+
+    //             <label>Title:</label>
+    //             <input type="text" name="title" value={formData.title} onChange={handleInputChange} /> <br/>
+
+    //             <label>Price:</label>
+    //             <input type="number" name="price" value={formData.price} onChange={handleInputChange} /> <br/>
+
+    //             <label>Description:</label>
+    //             <input type="text" name="description" value={formData.description} onChange={handleInputChange} /> <br/>
+
+    //             <label>Category:</label>
+    //             <input type="text" name="category" value={formData.category} onChange={handleInputChange} /> <br/>
+
+    //             <label>Image URL:</label>
+    //             <input type="text" name="image" value={formData.image} onChange={handleInputChange} /> <br/>
+
+    //             <label>Rating Rate:</label>
+    //             <input type="number" name="rating.rate" value={formData.rating.rate} onChange={handleInputChange} /> <br/>
+
+    //             <label>Rating Count:</label>
+    //             <input type="number" name="rating.count" value={formData.rating.count} onChange={handleInputChange} /> <br/>
+
+    //             <button type="submit">Submit</button>
+    //             <button type="button" onClick={clearForm}>Clear</button>
+    //             {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+    //         </form>
+    //     </div>
+    // );
+
+
     return (
-        <div>
+        <div className="create-container">
             <h1>Create New Product</h1>
-            <form onSubmit={createNew}>
+            <form onSubmit={createNew} className="create-form">
+            <div className="form-group">
                 <label>ID:</label>
-                <input type="number" name="id" value={formData.id} onChange={handleInputChange} /> <br/>
+                <input type="number" name="id" value={formData.id} onChange={handleInputChange} />
+            </div>
 
+            <div className="form-group">
                 <label>Title:</label>
-                <input type="text" name="title" value={formData.title} onChange={handleInputChange} /> <br/>
+                <input type="text" name="title" value={formData.title} onChange={handleInputChange} />
+            </div>
 
+            <div className="form-group">
                 <label>Price:</label>
-                <input type="number" name="price" value={formData.price} onChange={handleInputChange} /> <br/>
+                <input type="number" name="price" value={formData.price} onChange={handleInputChange} />
+            </div>
 
+            <div className="form-group">
                 <label>Description:</label>
-                <input type="text" name="description" value={formData.description} onChange={handleInputChange} /> <br/>
+                <input type="text" name="description" value={formData.description} onChange={handleInputChange} />
+            </div>
 
+            <div className="form-group">
                 <label>Category:</label>
-                <input type="text" name="category" value={formData.category} onChange={handleInputChange} /> <br/>
+                <input type="text" name="category" value={formData.category} onChange={handleInputChange} />
+            </div>
 
+            <div className="form-group">
                 <label>Image URL:</label>
-                <input type="text" name="image" value={formData.image} onChange={handleInputChange} /> <br/>
+                <input type="text" name="image" value={formData.image} onChange={handleInputChange} />
+            </div>
 
+            <div className="form-group">
                 <label>Rating Rate:</label>
-                <input type="number" name="rating.rate" value={formData.rating.rate} onChange={handleInputChange} /> <br/>
+                <input type="number" name="rating.rate" value={formData.rating.rate} onChange={handleInputChange} />
+            </div>
 
+            <div className="form-group">
                 <label>Rating Count:</label>
-                <input type="number" name="rating.count" value={formData.rating.count} onChange={handleInputChange} /> <br/>
+                <input type="number" name="rating.count" value={formData.rating.count} onChange={handleInputChange} />
+            </div>
 
-                <button type="submit">Submit</button>
-                <button type="button" onClick={clearForm}>Clear</button>
-                {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
+            <div className="form-actions">
+                <button type="submit" className="submit-button">Submit</button>
+                <button type="button" className="clear-button" onClick={clearForm}>Clear</button>
+            </div>
+                {successMessage && <p className="success-message">{successMessage}</p>}
             </form>
         </div>
     );
