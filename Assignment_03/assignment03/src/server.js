@@ -88,3 +88,54 @@ app.post("/addItem", async (req, res) => {
         await client.close();
     }
 });
+
+
+app.delete("/deleteItem/:id", async (req, res) => {
+    try {
+        await client.connect();
+
+        const productId = parseInt(req.params.id);
+
+        const collection = db.collection("fakestore_catalog");
+
+        const result = await collection.deleteOne({ id: productId });
+
+        if (result.deletedCount === 1) {
+            console.log(`Successfully deleted product with ID ${productId}`);
+            return res.status(200).json({ message: `Successfully deleted product with ID ${productId}` });
+        } else {
+            console.log(`No product found with ID ${productId}`);
+            return res.status(404).json({ error: `No product found with ID ${productId}` });
+        }
+    } catch (error) {
+        console.error("Error deleting item:", error);
+        return res.status(500).json({ error: "Internal Server Error" });
+    } finally {
+        await client.close();
+    }
+});
+
+
+app.put("/updateItem/:id", async (req, res) => {
+    try {
+        await client.connect();
+        const productId = req.params.id; // Adjust this if needed
+        const updatedData = req.body;
+
+        const collection = db.collection("fakestore_catalog");
+        const result = await collection.updateOne({ id: productId }, { $set: updatedData });
+
+        if (result.modifiedCount === 1) {
+            console.log(`Successfully updated product with ID ${productId}`);
+            return res.status(200).json({ message: `Successfully updated product with ID ${productId}` });
+        } else {
+            console.log(`No product found with ID ${productId}`);
+            return res.status(404).json({ error: `No product found with ID ${productId}` });
+        }
+    } catch (error) {
+        console.error("Error updating item:", error);
+        return res.status(500).json({ error: "Internal Server Error" });
+    } finally {
+        await client.close();
+    }
+});
