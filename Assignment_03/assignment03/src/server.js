@@ -119,7 +119,7 @@ app.delete("/deleteItem/:id", async (req, res) => {
 app.put("/updateItem/:id", async (req, res) => {
     try {
         await client.connect();
-        const productId = parseInt(req.params.id); // Adjust this if needed
+        const productId = parseInt(req.params.id);
         const updatedData = req.body;
 
         const collection = db.collection("fakestore_catalog");
