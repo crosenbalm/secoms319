@@ -64,6 +64,8 @@ function Confirmation({ cart, clearCart }) {
       <button onClick={finishOrder}>Finish Order</button>
     </div>
   );
+
+  
 }
 
 export default Confirmation;
