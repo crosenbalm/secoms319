@@ -1,3 +1,8 @@
+DATABASE NAME: coms319
+COLLECTION NAME: final
+
+COPY THE INFO BELOW INTO YOUR MONGODB
+
 [
       {
           "id": "1234",
