@@ -45,6 +45,9 @@ function App() {
             <li>
               <Link to="/changemenu">Change Menu</Link>
             </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
