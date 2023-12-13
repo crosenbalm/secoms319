@@ -5,6 +5,7 @@ import CartView from './CartView';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import ViewOrder from './ViewOrder';
+import ChangeMenu from './ChangeMenu';
 import About from './About';
 
 import './app.css';
@@ -45,6 +46,9 @@ function App() {
               <Link to="/vieworder">View Order</Link>
             </li>
             <li>
+              <Link to="/changemenu">Change Menu</Link>
+            </li>
+            <li>
               <Link to="/about">About</Link>
             </li>
           </ul>
@@ -52,6 +56,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ProductList addToCart={addToCart} />} />
           <Route path="/cart" element={<CartView cart={cart} setCart={setCart} subtractFromCart={subtractFromCart} />} />
+          <Route path="/changemenu" element={<ChangeMenu />} />
           <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart} />} />
           <Route path="/confirmation" element={<Confirmation cart={cart} clearCart={clearCart} />} />
           <Route path="/vieworder" element={<ViewOrder />} />
