@@ -7,6 +7,9 @@ import Confirmation from './Confirmation';
 import ViewOrder from './ViewOrder';
 import About from './About';
 
+import './app.css';
+
+
 function App() {
   const [cart, setCart] = useState([]);
 
