@@ -88,30 +88,31 @@ app.post("/addDish", async (req, res) => {
   });
 
 
-app.delete("/deleteDish/:id", async (req, res) => {
-  try {
+  app.delete("/deleteDish/:id", async (req, res) => {
+    try {
       await client.connect();
-
-      const productId = parseInt(req.params.id);
-
+  
+      const productId = parseInt(req.params.id); // Corrected line
+  
       const collection = db.collection(menu_collection);
-
+  
       const result = await collection.deleteOne({ id: productId });
-
+  
       if (result.deletedCount === 1) {
-          console.log(`Successfully deleted product with ID ${productId}`);
-          return res.status(200).json({ message: `Successfully deleted product with ID ${productId}` });
+        console.log(`Successfully deleted product with ID ${productId}`);
+        return res.status(200).json({ message: `Successfully deleted product with ID ${productId}` });
       } else {
-          console.log(`No product found with ID ${productId}`);
-          return res.status(404).json({ error: `No product found with ID ${productId}` });
+        console.log(`No product found with ID ${productId}`);
+        return res.status(404).json({ error: `No product found with ID ${productId}` });
       }
-  } catch (error) {
+    } catch (error) {
       console.error("Error deleting item:", error);
       return res.status(500).json({ error: "Internal Server Error" });
-  } finally {
+    } finally {
       await client.close();
-  }
-});
+    }
+  });
+  
 
 
 app.put("/updateItem/:id", async (req, res) => {

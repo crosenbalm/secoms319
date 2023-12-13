@@ -6,18 +6,17 @@ const Delete = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(`Deleting product with ID: ${productId}`);
-
+  
     try {
-      const response = await fetch(`http://localhost:8081/deleteDish/:id`, {
+      const response = await fetch(`http://localhost:8081/deleteDish/${productId}`, {
         method: 'DELETE'
       });
-
-      const data = await response.json();
-
+  
       if (response.ok) {
-        console.log('Product deleted successfully:', data);
+        console.log('Product deleted successfully');
         alert(`Product with ID: ${productId} deleted successfully.`);
       } else {
+        const data = await response.json();
         console.error('Delete failed:', data);
         alert(`Failed to delete product: ${data.error}`);
       }
@@ -25,9 +24,10 @@ const Delete = () => {
       console.error('Error:', error);
       alert('An error occurred while deleting the product.');
     }
-
+  
     setProductId('');
   };
+  
 
   return (
     <div className="delete-container">

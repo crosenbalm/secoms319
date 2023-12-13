@@ -14,62 +14,60 @@ const Create = () => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-
-        if (name.includes('rating')) {
-            setFormData({
-                ...formData,
-                rating: {
-                    ...formData.rating,
-                    [name.split('.')[1]]: value
-                }
-            });
-        } else {
             setFormData((prevFormData) => ({
                 ...prevFormData,
                 [name]: value
             }));
-        }
+        
     };
 
     const createNew = (e) => {
         e.preventDefault(); // Prevent default form submission behavior
-    
+      
         // Validation checks
         for (const key in formData) {
-            if (formData[key] === '' || (typeof formData[key] === 'object' && (formData[key].rate === 0 || formData[key].count === 0))) {
-                // Field is empty or has an invalid value
-                alert(`Please fill out the ${key} field.`);
-                return;
-            }
+          if (
+            formData[key] === '' ||
+            (typeof formData[key] === 'object' &&
+              (formData[key].rate === 0 || formData[key].count === 0))
+          ) {
+            // Field is empty or has an invalid value
+            alert(`Please fill out the ${key} field.`);
+            return;
+          }
         }
-    
+      
+        // Convert numeric fields to integers
         const formattedData = {
-            ...formData,
-            rating: { ...formData.rating }
+          ...formData,
+          id: parseInt(formData.id),
+          price: parseInt(formData.price),
+          rating: { ...formData.rating },
         };
-    
+      
         fetch('http://localhost:8081/addDish', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formattedData)
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formattedData),
         })
-        .then(response => response.json())
-        .then(data => {
+          .then((response) => response.json())
+          .then((data) => {
             console.log(data);
-    
+      
             // Check if the element with ID "showData" exists before manipulating it
-            var container = document.getElementById("showData");
+            var container = document.getElementById('showData');
             if (container) {
-                container.innerHTML = JSON.stringify(data);
+              container.innerHTML = JSON.stringify(data);
             }
-    
+      
             setFormData(initialFormData);
-    
+      
             setSuccessMessage('Product added successfully!');
-    
+      
             setTimeout(() => setSuccessMessage(''), 6000);
-        });
-    };
+          });
+      };
+      
     
 
     const clearForm = () => {
