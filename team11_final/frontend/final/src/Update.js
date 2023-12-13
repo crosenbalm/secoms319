@@ -69,7 +69,7 @@ const Update = () => {
 
   return (
     <div className="update-container">
-      <h1>Update Product</h1>
+      <h1>Update Dish</h1>
       <form onSubmit={handleSubmit} className="update-form">
         <input
           type="text"

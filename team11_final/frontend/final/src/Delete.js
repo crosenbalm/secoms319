@@ -31,7 +31,7 @@ const Delete = () => {
 
   return (
     <div className="delete-container">
-      <h1>Delete Product</h1>
+      <h1>Delete Dish</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

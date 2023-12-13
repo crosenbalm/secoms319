@@ -78,7 +78,7 @@ const Create = () => {
 
     return (
         <div className="create-container">
-            <h1>Create New Product</h1>
+            <h1>Create New Dish</h1>
             <form onSubmit={createNew} className="create-form">
                 <input type="number" placeholder="Dish ID" name="id" value={formData.id} onChange={handleInputChange} />
                 <input type="text" placeholder="Dish Title" name="title" value={formData.title} onChange={handleInputChange} />
