@@ -5,6 +5,7 @@ import CartView from './CartView';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import ViewOrder from './ViewOrder';
+import About from './About';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -40,6 +41,9 @@ function App() {
             <li>
               <Link to="/vieworder">View Order</Link>
             </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -48,6 +52,8 @@ function App() {
           <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart} />} />
           <Route path="/confirmation" element={<Confirmation cart={cart} clearCart={clearCart} />} />
           <Route path="/vieworder" element={<ViewOrder />} />
+          <Route path="/about" element={<About />} />
+
         </Routes>
       </div>
     </Router>

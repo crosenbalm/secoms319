@@ -1,0 +1,30 @@
+.about-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .team-member h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .team-member p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .team-member strong {
+    color: #333;
+  }
+  
