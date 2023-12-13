@@ -1,6 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import './cartview.css';
+
+
 function CartView({ cart, setCart, subtractFromCart }) {
   const navigate = useNavigate();
 

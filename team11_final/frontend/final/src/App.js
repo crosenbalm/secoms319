@@ -8,6 +8,9 @@ import ViewOrder from './ViewOrder';
 import ChangeMenu from './ChangeMenu';
 import About from './About';
 
+import './app.css';
+
+
 function App() {
   const [cart, setCart] = useState([]);
 
