@@ -4,9 +4,6 @@ import { useNavigate } from 'react-router-dom';
 function Checkout({ cart, clearCart }) {
   const navigate = useNavigate();
 
-  
-
-  // Aggregate cart items by id and count them
   const cartWithCounts = cart.reduce((acc, item) => {
     if (!acc[item.id]) {
       acc[item.id] = { ...item, count: 1 };
@@ -16,21 +13,12 @@ function Checkout({ cart, clearCart }) {
     return acc;
   }, {});
 
-  // Convert the map object back to an array for rendering
   const cartItems = Object.values(cartWithCounts);
 
   const handleCheckout = () => {
-    // Implement your checkout logic here.
-    // clearCart();
+
     navigate('/confirmation');
   };
-
-
-  // const handleCheckout = () => {
-  //   // You can add any pre-payment logic here if necessary
-  //   clearCart();
-  //   navigate('/payment');
-  // };
 
   const total = cart.reduce((acc, item) => acc + item.price, 0);
 

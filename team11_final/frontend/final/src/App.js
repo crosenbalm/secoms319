@@ -17,7 +17,7 @@ function App() {
     const itemIndex = cart.findIndex((item) => item.id === product.id);
   if (itemIndex !== -1) {
     const updatedCart = [...cart];
-    updatedCart.splice(itemIndex, 1); // Remove the item at itemIndex
+    updatedCart.splice(itemIndex, 1);
     setCart(updatedCart);
   }
   };
