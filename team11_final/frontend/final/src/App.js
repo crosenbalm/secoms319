@@ -42,6 +42,9 @@ function App() {
             <li>
               <Link to="/vieworder">View Order</Link>
             </li>
+            <li>
+              <Link to="/changemenu">Change Menu</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
