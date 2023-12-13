@@ -1,0 +1,16 @@
+Steps to run the site (assuming you have all the software from class downloaded):
+
+1. MongoDB
+    a. In mongodb, make sure you have a database named 'coms319' and a collection named 'final'
+    b. Make sure the products from products.json is in your collection
+    b. Connection string should be localhost:27017 (located in the top left corner)
+
+2. Running the local server
+    a. Open powershell in the '\secoms319\team11_final\backend' and run 'node server.js'
+    b. Successful execution should give a response of "App listening at http://localhost:8081"
+    c. IMPORTANT: Keep this powershell window open. This runs the local server that the site runs on.
+
+3. Running the website
+    a. Open another powershell window at '\secoms319\team11_final\frontend\final'
+    b. Run 'nodemon App.js'
+    c. The site should successfully open and be connected to your local server.

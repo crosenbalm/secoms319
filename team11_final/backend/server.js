@@ -1,34 +1,36 @@
 const express = require('express');
-const mongoose = require('mongoose');
-const MenuItem = require('./models/Dish');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const { MongoClient } = require('mongodb');
+
 const app = express();
-const PORT = 3001;
+const port = 8081;
+const host = 'localhost';
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/Restaurant-CS319', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+app.use(cors());
+app.use(bodyParser.json());
+
+const url = 'mongodb://127.0.0.1:27017';
+const dbName = 'coms319';
+const collection = 'final';
+const client = new MongoClient(url);
+const db = client.db(dbName);
+
+app.listen(port, () => {
+  console.log(`App listening at http://${host}:${port}`);
 });
 
-// Define a MongoDB model
-const MenuItem = mongoose.model('MenuItem', {
-  id: String,
-  dishName: String,
-  dishPrice: Number,
-  // Add other fields as needed
-});
+app.get("/listDishes", async (req, res) => {
+  await client.connect();
+  console.log("Node connected successfully to GET MongoDB");
+  const query = {};
+  const results = await db
+  .collection(collection)
+  .find(query)
+  .limit(100)
+  .toArray();
 
-// Define API endpoint to fetch dishes
-app.get('/api/menu_items', async (req, res) => {
-  try {
-    const menuItems = await MenuItem.find();
-    res.json(menuItems);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Internal Server Error');
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(results);
+  res.status(200);
+  res.send(results);
 });

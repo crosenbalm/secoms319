@@ -6,7 +6,7 @@ const Shop = () => {
     const [menuItems, setMenuItems] = useState([]);
 
     useEffect(() => {
-        fetch('/api/menu_items')
+        fetch('/listDishes')
         .then((response) => response.json())
         .then((data) => setMenuItems(data))
         .catch((error) => console.error('Error fetchng data:', error));

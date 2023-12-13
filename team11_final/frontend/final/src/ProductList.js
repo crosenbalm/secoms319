@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
-import products from './products.json';
+import React, { useState, useEffect } from 'react';
 
 function ProductList({ addToCart }) {
   const [searchTerm, setSearchTerm] = useState('');
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:8081/listDishes');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error('Error fetching product data:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
   const filteredProducts = searchTerm
-    ? products.filter(product =>
-        product.dishName.toLowerCase().includes(searchTerm.toLowerCase())
+    ? products.filter((product) =>
+        product.title.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : products;
 
@@ -25,10 +39,10 @@ function ProductList({ addToCart }) {
       />
       {filteredProducts.map((product) => (
         <div key={product.id}>
-          <img src={product.url} alt={product.disName} width={150} />
-          <h2>{product.dishName}</h2>
+          <img src={product.image} alt={product.title} width={150} />
+          <h2>{product.title}</h2>
           <p>{product.description}</p>
-          <p>Price: ${product.dishPrice}</p>
+          <p>Price: ${product.price}</p>
           <button onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       ))}
