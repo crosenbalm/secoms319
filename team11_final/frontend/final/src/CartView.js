@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import './cartview.css';
+import './CSS/cartview.css';
 
 
 function CartView({ cart, setCart, subtractFromCart }) {
@@ -46,7 +46,7 @@ const decrementCount = (item) => {
         {cartItems.map((item) => (
           <li key={item.id} style={{ marginBottom: '20px' }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img src={item.image} alt={item.title} style={{ width: '100px', height: '100px', marginRight: '20px' }} />
+              <img src={item.image} alt={item.title} style={{ width: '150px' }} />
               <div>
                 <h3>{item.title} (x{item.count})</h3>
                 <p>{item.description}</p>

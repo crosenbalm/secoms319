@@ -1,5 +1,4 @@
-// Import necessary React modules
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Create from './Create';
 import Delete from './Delete';
 import Update from './Update';

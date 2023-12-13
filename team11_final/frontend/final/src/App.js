@@ -7,7 +7,7 @@ import Confirmation from './Confirmation';
 import ChangeMenu from './ChangeMenu';
 import About from './About';
 
-import './app.css';
+import './CSS/app.css';
 
 
 function App() {
